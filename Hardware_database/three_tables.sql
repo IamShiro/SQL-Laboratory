@@ -15,7 +15,7 @@ memory_slot_type varchar(4) default null
 create table graphics_cards(
 
 id_graphics_card int primary key not null auto_increment,
-`nome_graphics_card` varchar(50) not null unique,
+`name_graphics_card` varchar(50) not null unique,
 model_graphics_card varchar(50) not null unique,
 brand_graphics_card varchar(20) not null
 
