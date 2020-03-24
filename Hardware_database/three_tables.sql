@@ -14,19 +14,25 @@ memory_slot_type varchar(4) default null
 
 create table graphics_cards(
 
-id_graphics_card int primary key not null auto_increment,
-`name_graphics_card` varchar(50) not null unique,
+id_graphics_card int primary key auto_increment,
+name_graphics_card varchar(50) not null unique,
 model_graphics_card varchar(50) not null unique,
-brand_graphics_card varchar(20) not null
-
+brand_graphics_card varchar(20) not null,
+max_power_supply varchar(4) default null,
+memory_speed varchar(5) default null,
+clock varchar(10) default null,
+socket_graphics_card varchar(20) default null
 
 ) default charset utf8;
 
 create table power_supplies(
 
 id_power_supply int primary key not null auto_increment,
-`name_power_supply` varchar(50) not null unique,
+name_power_supply varchar(50) not null unique,
 model_power_supply varchar(50) not null unique,
-brand_power_supply varchar(20) not null
+brand_power_supply varchar(20) not null,
+conectors text default null,
+min_voltage tinyint default null,
+max_voltage tinyint default null
 
-)
+) default charset utf8;
