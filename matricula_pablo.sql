@@ -3,7 +3,7 @@ use matricula_pablo;
 
 create table ALUNO
 (
-	cpf bigint unique,
+    cpf bigint unique,
     nome varchar(40),
     curso varchar(40),
     datanasc date
@@ -12,7 +12,7 @@ create table ALUNO
 
 create table DISCIPLINA
 (
-	num_disciplina int unique,
+    num_disciplina int unique,
     Dnome varchar(40),
     dept varchar(30)
 
@@ -20,7 +20,7 @@ create table DISCIPLINA
 
 create table INSCRICAO
 (
-	cpf bigint,
+    cpf bigint,
     num_disciplina int,
     semestre tinyint,
     nota tinyint
@@ -29,7 +29,7 @@ create table INSCRICAO
 
 create table LIVRO_ADOTADO
 (
-	num_disciplina int,
+    num_disciplina int,
     semestre tinyint,
     isbn_livro int
     
@@ -37,10 +37,10 @@ create table LIVRO_ADOTADO
 
 create table LIVRO
 (
-	isbn_livro int unique,
+    isbn_livro int unique,
     titulo_livro varchar(40),
     editora varchar(20),
-	autor varchar(30)
+    autor varchar(30)
 
 );
 
