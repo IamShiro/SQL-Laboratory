@@ -61,13 +61,13 @@ insert into inscricao (cpf,num_disciplina,semestre,nota) values
 (79949514818,50,2,6);
 
 insert into livro_adotado (num_disciplina,semestre,isbn_livro) values
-(1,1,76584),
-(10,5,78742),
-(50,2,74244);
+(1,1,7658475278567),
+(10,5,7874278567681),
+(50,2,7424478678678);
 
 insert into livro (isbn_livro,titulo_livro,editora,autor) values
-(76584,"Hamilton Calculo I","Cultura","Hamilton"),
-(78742,"Introdução a Banco de dados","Leya","Roberta Macedo"),
-(74244,"O Comportamente Humano","Saraiva","Sirlene Nascimento");
+(7658475278567,"Hamilton Calculo I","Cultura","Hamilton"),
+(7874278567681,"Introdução a Banco de dados","Leya","Roberta Macedo"),
+(7424478678678,"O Comportamente Humano","Saraiva","Sirlene Nascimento");
 
 commit;
