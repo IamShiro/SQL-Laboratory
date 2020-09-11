@@ -24,6 +24,7 @@ create table INSCRICAO
     num_disciplina int,
     semestre tinyint,
     nota tinyint
+    
 
 );
 
@@ -32,7 +33,7 @@ create table LIVRO_ADOTADO
     num_disciplina int,
     semestre tinyint,
     isbn_livro int
-    
+   
 );
 
 create table LIVRO
@@ -70,4 +71,7 @@ insert into livro (isbn_livro,titulo_livro,editora,autor) values
 (7874278567681,"Introdução a Banco de dados","Leya","Roberta Macedo"),
 (7424478678678,"O Comportamente Humano","Saraiva","Sirlene Nascimento");
 
-commit;
+alter table incricao ADD FOREIGN KEY(cpf) REFERENCES aluno(cpf);
+alter table incricao ADD FOREIGN KEY(num_disciplina) REFERENCES disciplina(num_disciplina);
+alter table livro_adotado ADD FOREIGN KEY(num_disciplina) REFERENCES disciplina(num_disciplina);
+alter table livro_adotado ADD FOREIGN KEY(isbn_livro) REFERENCES livro(isbn_livro);
