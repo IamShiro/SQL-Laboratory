@@ -27,7 +27,7 @@ create table livro_copias(
 create table livro_emprestimo(
 	Cod_livro varchar(20) not null,
     	Cod_unidade varchar(3) not null,
-    	Num_cartao varchar(11) not null,
+    	Nr_cartao varchar(11) not null,
     	Data_emprestimo date not null,
     	Data_devoluçao date not null,
     	primary key(Cod_livro, Cod_unidade, Num_cartao));
@@ -90,5 +90,5 @@ alter table livro_copias add foreign key(Cod_livro) references livro(Cod_livro);
 alter table livro_copias add foreign key(Cod_unidade) references unidade_biblioteca(Cod_unidade);
 alter table livro_emprestimo add foreign key(Cod_livro) references livro(Cod_livro);
 alter table livro_emprestimo add foreign key(Cod_unidade) references unidade_biblioteca(Cod_unidade);
-alter table livro_emprestimo add foreign key(Num_cartao) references usuario(Num_cartao);
+alter table livro_emprestimo add foreign key(Nr_cartao) references usuario(Num_cartao);
 
