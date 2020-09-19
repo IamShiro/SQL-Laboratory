@@ -31,10 +31,10 @@ create table pedido(
 create table item_pedido(
 
 	NumItem 	int primary key auto_increment, 
-    NumPedido 		int not null, #foreign key
+    	NumPedido 	int not null, #foreign key
 	CodProd 	int not null, #foreign key
-    Quantidade 		int not null,
-    PreçoUnitário 	float(7,2)
+    	Quantidade 	int not null,
+    	PreçoUnitário 	float(7,2)
 
 ) engine = InnoDB;
 
