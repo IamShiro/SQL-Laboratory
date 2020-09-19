@@ -23,7 +23,7 @@ create table produto(
 create table pedido(
 
 	NumPedido 	int primary key auto_increment, 
-	CodCli 		int not null, #foreign key
+	CodCli 		int not null primary key, #foreign key
 	`Data` 		date
 	
 ) engine = InnoDB;
@@ -31,13 +31,14 @@ create table pedido(
 create table item_pedido(
 
 	NumItem 	int primary key auto_increment, 
-    	NumPedido 	int not null, #foreign key
-	CodProd 	int not null, #foreign key
+    	NumPedido 	int not null primary key, #foreign key
+	CodProd 	int not null primary key, #foreign key
     	Quantidade 	int not null,
     	PreçoUnitário 	float(7,2)
 
 ) engine = InnoDB;
 
+alter table pedido add foreign key (CodCli) references cliente(CodCli);
 alter table item_pedido add foreign key (NumPedido) references pedido(NumPedido) on delete cascade;
 alter table item_pedido add foreign key (CodProd) references produto(CodProd) on delete restrict on update cascade;
 
