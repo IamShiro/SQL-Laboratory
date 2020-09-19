@@ -79,10 +79,10 @@ insert into unidade_biblioteca values
     	('02','Biblioteca setorial','R ficticia 2');
     
 insert into usuario values
-	('11111111111','Cris','R. Piracicaba','81966668888'),
-    	('22222222222','Anabelle','R. Piracicaba','81933334444'),
-    	('31313131313','Nami','R. Itabuna','81922221212'),
-    	('13131313131','Caio','R. São Paulo','81955555555');
+	('111115555558','Cris','R. Piracicaba','81966668888'),
+    	('899198294894','Anabelle','R. Piracicaba','81933334444'),
+    	('684981981915','Nami','R. Itabuna','81922221212'),
+    	('138979777745','Caio','R. São Paulo','81955555555');
     
 alter table livro add foreign key(Nome_editora) references editora(Nome);
 alter table livro_autor add foreign key(Cod_livro) references livro(Cod_livro);
