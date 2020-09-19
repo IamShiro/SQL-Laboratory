@@ -47,15 +47,15 @@ create table usuario(
     
 insert into livro values
 	('123','Sistemas de Banco de Dados','Pearson'),
-	('321','blablabla2','Pearson'),
-	('50','blablabla3','Panini'),
-    	('51','blablabla4','JBC');
+	('321','Calculo I','Pearson'),
+	('50','Física I','Panini'),
+    	('51','Quimica I','JBC');
 
 insert into livro_autor values
-	('123','Carlos'),
-    	('321','Ernesto'),
-    	('50','Pablo'),
-    	('51','Josefina');
+	('123','Laura'),
+    	('321','Antonia'),
+    	('50','Allanys'),
+    	('51','Vitória');
     
 insert into editora values
 	('Pearson','Av. Abdias de Carvalho, 3','81999999999'),
@@ -69,20 +69,20 @@ insert into livro_copias values
     	('51','02','9');
     
 insert into livro_emprestimo values
-	('123','01','11111111111','2020-08-18','2020-09-18'),
-    	('123','01','22222222222','2020-09-10','2020-10-10'),
-    	('50','02','31313131313','2020-08-30','2020-09-30'),
-    	('51','02','13131313131','2020-02-12','2020-03-12');
+	('123','01','111115555558','2020-08-18','2020-09-18'),
+    	('123','01','899198294894','2020-09-10','2020-10-10'),
+    	('50','02','684981981915','2020-08-30','2020-09-30'),
+    	('51','02','138979777745','2020-02-12','2020-03-12');
     
 insert into unidade_biblioteca values
 	('01','SEDE_UFRPE','R ficticia 1'),
     	('02','Biblioteca setorial','R ficticia 2');
     
 insert into usuario values
-	('11111111111','Victor','R. Piracicaba','81966668888'),
-    	('22222222222','Ana','R. Piracicaba','81933334444'),
-    	('31313131313','Messias','R. Itabuna','81922221212'),
-    	('13131313131','Sirlene','R. São Paulo','81955555555');
+	('11111111111','Cris','R. Piracicaba','81966668888'),
+    	('22222222222','Anabelle','R. Piracicaba','81933334444'),
+    	('31313131313','Nami','R. Itabuna','81922221212'),
+    	('13131313131','Caio','R. São Paulo','81955555555');
     
 alter table livro add foreign key(Nome_editora) references editora(Nome);
 alter table livro_autor add foreign key(Cod_livro) references livro(Cod_livro);
