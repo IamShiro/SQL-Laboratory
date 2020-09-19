@@ -1,5 +1,5 @@
-create database loja;
-use loja;
+create database loja_pablo;
+use loja_pablo;
 
 
 create table cliente (
