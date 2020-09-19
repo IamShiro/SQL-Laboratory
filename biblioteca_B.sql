@@ -4,7 +4,7 @@
 select Titulo from livro where Nome_editora = 'Pearson';
 
 #2)
-select livro.Titulo, livro_autor.Nome_autor from livro join livro_autor  on livro.Cod_livro = livro_autor.Cod_livro
+select l.Titulo, la.Nome_autor from livro as l join livro_autor as la on l.Cod_livro = la.Cod_livro
 
 #3)
 select lc.Qt_copia from livro_copias as lc 
