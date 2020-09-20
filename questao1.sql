@@ -30,7 +30,7 @@ create table livro_emprestimo(
     	Nr_cartao varchar(11) not null,
     	Data_emprestimo date not null,
     	Data_devoluçao date not null,
-    	primary key(Cod_livro, Cod_unidade, Num_cartao));
+    	primary key(Cod_livro, Cod_unidade, Nr_cartao));
     
 create table unidade_biblioteca(
 	Cod_unidade varchar(3) not null,
