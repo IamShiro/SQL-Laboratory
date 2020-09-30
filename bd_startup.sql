@@ -4,7 +4,7 @@ use bd_startup;
 create table startup
 (
 	id_startup int primary key auto_increment,
-    nome_startup varchar(50) unique
+    	nome_startup varchar(50) unique
 
 ) engine = InnoDB;
 
@@ -12,27 +12,27 @@ create table startup
 create table linguagem_programacao
 (
 	id_linguagem int primary key auto_increment,
-    linguagem varchar(10) unique
+    	linguagem varchar(10) unique
 
 ) engine = InnoDB;
 
 create table programador 
 (
 	id_programador int primary key auto_increment,
-    id_startup int,
-    nome_programador varchar(30),
+    	id_startup int,
+    	nome_programador varchar(30),
     
-    foreign key (id_startup) references startup (id_startup)
+    	foreign key (id_startup) references startup (id_startup)
     
 ) engine = InnoDB;
 
 create table programador_linguagem 
 (
 	id_programador int,
-    id_startup int,
+    	id_startup int,
 
 	foreign key (id_programador) references programador (id_programador),
-    foreign key (id_startup) references startup (id_startup)
+    	foreign key (id_startup) references startup (id_startup)
     
 ) engine = InnoDB;
 
