@@ -42,9 +42,7 @@ on p.id_startup = s.id_startup;
 -- VI
 
 select nome_startup from startup as s 
-where s.id_startup not in (select s.id_startup from startup as s 
-	inner join programador as p 
-	on s.id_startup = p.id_startup);
+where s.id_startup not in (select id_startup from  programador);
     
     
 
