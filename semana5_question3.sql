@@ -43,17 +43,11 @@ on d.cpf_gerente = f.cpf;
  
 -- g)
 
-
+-- dank god
 create view view_name as
-select f.Pnome, f.cpf_supervisor, f.salario from funcionario as f
+select f.Pnome, (select f2.pnome from funcionario as f2 where f.cpf_supervisor = f2.cpf) as nome_supervisor, f.salario from funcionario as f
 inner join departamento as d
-on d.Dnumero = f.dnr where Dnome = "Pesquisa";
-
-select d.Dnome, f.Pnome, d.cpf_gerente from departamento as d
-inner join funcionario as f
-on d.cpf_gerente = f.cpf;
-
-SELECT Pnome FROM funcionario as f where f.cpf = f.cpf_supervisor;
+on d.Dnumero = f.dnr where Dnome = "Pesquisa"; 
 
 -- h)
 
