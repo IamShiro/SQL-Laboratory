@@ -43,6 +43,19 @@ on p.id_startup = s.id_startup;
 
 select nome_startup from startup as s 
 where s.id_startup not in (select id_startup from  programador);
+
+C)
+
+-- retorna tudo sobre as startup e seus programadores
+select * from startup as s
+left join programador as p
+on s.id_startup = p.id_startup
+
+union
+
+select * from startup as s
+right join programador as p
+on s.id_startup = p.id_startup;
     
     
 
