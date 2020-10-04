@@ -67,3 +67,10 @@ insert into programador_linguagem values
 (3,4), -- Renata
 (3,5),
 (4,5); -- Felipe
+
+
+
+
+
+
+
