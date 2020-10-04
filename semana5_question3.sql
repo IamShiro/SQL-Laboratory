@@ -99,11 +99,19 @@ group by dnr
 having count(cpf) > (select count(*) from funcionario where dnr = 4);
 
 -- l)
- 
+
+-- faz uma exceção dos salarios dos gerentes serem maiores que dos funcionarios normais
+create assertion var
+check (exists select salario from funcionario where cpf not in (select cpf_gerente from departamento) and salario in
+       (select f.salario from departamento as d inner join funcionario as f on d.cpf_gerente = f.cpf);                     
  
 -- m)
 
-
+-- realiza um aumento em 35% no salário do funcionario atualizado
+create trigger aumento after update
+on funcionario
+for each row
+set funcionario.salario = (funcionario * 1.35);
 
 
 
